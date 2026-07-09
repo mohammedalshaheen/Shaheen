@@ -1,0 +1,220 @@
+/* ====== FEATURE CARD ====== */
+
+.featureCard{
+  position: relative;
+
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  padding:22px;
+
+  border-radius:26px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.03)
+    );
+
+  backdrop-filter:blur(24px);
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  transition:
+    transform .35s,
+    box-shadow .35s,
+    border-color .35s;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.35);
+}
+
+/* انعكاس ضوء */
+
+.featureCard::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.featureCard:hover::before{
+
+left:140%;
+
+}
+
+.featureCard:hover{
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+}
+
+.featureIcon{
+
+width:72px;
+height:72px;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+flex-shrink:0;
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.25);
+
+}
+
+.featureCard:hover .featureIcon{
+
+transform:
+rotate(-6deg)
+scale(1.08);
+
+}
+
+.featureContent{
+
+flex:1;
+
+text-align:right;
+
+}
+
+.featureContent h3{
+
+margin:0;
+
+font-size:22px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+.featureContent p{
+
+margin-top:8px;
+
+color:#9CA3AF;
+
+line-height:1.7;
+
+font-size:15px;
+
+}
+
+.featureArrow{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,255,255,.07);
+
+color:white;
+
+font-size:20px;
+
+transition:.35s;
+
+}
+
+.featureCard:hover .featureArrow{
+
+transform:translateX(-6px);
+
+background:white;
+
+color:#111827;
+
+}
+/* ===========================
+   CARD COLORS
+=========================== */
+
+.featureCard.blue .featureIcon{
+background:linear-gradient(135deg,#0EA5E9,#2563EB);
+box-shadow:0 0 35px rgba(37,99,235,.45);
+}
+
+.featureCard.blue:hover{
+border-color:#2563EB;
+box-shadow:0 20px 45px rgba(37,99,235,.30);
+}
+
+.featureCard.purple .featureIcon{
+background:linear-gradient(135deg,#A855F7,#7C3AED);
+box-shadow:0 0 35px rgba(124,58,237,.45);
+}
+
+.featureCard.purple:hover{
+border-color:#7C3AED;
+box-shadow:0 20px 45px rgba(124,58,237,.30);
+}
+
+.featureCard.green .featureIcon{
+background:linear-gradient(135deg,#22C55E,#16A34A);
+box-shadow:0 0 35px rgba(22,163,74,.40);
+}
+
+.featureCard.green:hover{
+border-color:#16A34A;
+box-shadow:0 20px 45px rgba(22,163,74,.28);
+}
+
+.featureCard.orange .featureIcon{
+background:linear-gradient(135deg,#F59E0B,#EA580C);
+box-shadow:0 0 35px rgba(234,88,12,.40);
+}
+
+.featureCard.orange:hover{
+border-color:#EA580C;
+box-shadow:0 20px 45px rgba(234,88,12,.28);
+}

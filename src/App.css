@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 22px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 600px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.upload {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload:hover {
+  background: #1d4ed8;
+}
